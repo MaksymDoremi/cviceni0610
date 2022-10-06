@@ -12,6 +12,16 @@ body{
 	display: inline-block;
 	padding: 100px;
 	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+	border-radius: 10px;
+	
+}
+
+.container{
+
+	max-width: 1100px;
+	margin: 0 auto;
+	overflow: auto;
+	padding: 0 40px;
 }
 
 .grid{
@@ -38,13 +48,21 @@ body{
 @media(max-width: 968px){
 	.grid{
 		grid-template-columns: 1fr;
+		
 		grid-template-rows: repeat(8, 1fr);
 	}
-	.grid > *:first-child,
+
+	/*.grid > *:first-child,
 	.grid > *:ntn-child(2),
 	.grid > *:ntn-child(7){
-		grid-column: 1;
+		grid-column: 1 /span 1;
 		
+	}*/
+
+	.grid >*{
+
+		
+		grid-column: 1;
 	}
 }
 
